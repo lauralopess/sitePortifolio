@@ -1,0 +1,245 @@
+/*
+margin corresponde ao espaçamento externo da caixa em que o elemento está até os 
+cantos da página
+
+padding corresponde ao espaçamento interno do elemento em relação á sua própria caixa
+
+background corresponde ao fundo, no qual é possível colocar uma cor sólida única
+ou em gradiente
+
+box-sizing: content-box não é uma boa prática, pois
+ao aumentarmos uma imagem, por exemplo, ou qualquer outro 
+elemento, o que ocorre é que a CAIXA DE CONTEÚDO (em que
+o elemento está) aumenta e não ele em si, causando possíveis
+distorções. O ideal é utilizar box-sizing: border-box
+
+Utilizar o site: https://cssgradient.io/
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+#menu {
+    display: flex;
+    /* Selecionar o layout flexbox */
+    list-style: none;
+    /* Tirar as bolinhas de cada item da lista */
+    padding: 25px;
+    justify-content: center;
+}
+
+#menu a {
+    color: rgb(245, 245, 245);
+    /* Aplicar  uma cor */
+    font-family: 'Karla', sans-serif;
+    /* Aplicar uma fonte */
+    font-size: 15px;
+    /* Aumentar o tamanho da fonte */
+    text-decoration: none;
+    /* Tirar o sublinhado*/
+    flex-direction: row;
+    /* Tirar o sublinhado do link */
+    margin: 10px;
+    /* Atribuir uma margin a cada item */
+    text-transform: uppercase;
+}
+
+/* Ao passar ao mouse */
+#menu a:hover {
+    color: rgb(194, 133, 238);
+
+}
+
+h1,h2 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: 'Karla', sans-serif;
+    line-height: 170%;
+    /* Define a altura da linha em relação á próxima */
+
+}
+
+
+header {
+    background: linear-gradient(90deg, rgba(112,20,145,1) 7%, rgba(69,29,119,1) 43%, #1a0238 70%);
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    color: rgb(233, 233, 233);
+
+}
+
+.apresentacao {
+    display: flex;
+
+
+}
+
+.right {
+    flex: 4;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.left {
+    flex: 6;
+    text-align: center;
+}
+
+
+.btn {
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Karla', sans-serif;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.btnContact {
+    margin-top: 20px;
+    background: #f8c1ff;
+}
+
+.btnContact:hover {
+    
+    background: #a564ad85;
+    color: white;
+}
+
+.containerServicos {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.itemServico1, .itemServico3, .itemServico5, .itemServico7 {
+    border: 1.5px solid #4c19ac;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 25px 25px;
+    text-align: center;
+    width: 20%;
+    
+}
+
+.itemServico2, .itemServico4, .itemServico6, .itemServico8 {
+    border: 1.5px solid #520fcf;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 25px 25px;
+    text-align: center;
+    width: 20%;
+
+}
+
+.containerServicos h2 {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+}
+
+.containerServicos img {
+    width: 60px;
+}
+
+.itemServico1:hover, .itemServico3:hover, .itemServico5:hover, .itemServico7:hover {
+    border: 1px solid #4c19ac;
+    background: #520fcf52;
+    cursor: pointer;
+}
+
+.itemServico2:hover, .itemServico4:hover, .itemServico6:hover, .itemServico8:hover {
+    border: 1px solid #520fcf;
+    background: #4c19ac59;
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    padding-top: 90px;  
+    font-size: 17px;
+    text-transform: uppercase; 
+}
+
+.containerSobreMim {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.containerSobreMim .left {
+    padding-left: 25px;
+    padding-right: 25px;
+    flex: 4;
+}
+
+.containerSobreMim .right {
+    flex: 6;
+    text-align: center;
+}
+
+
+
+#sobremim h3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #1f053f;
+}
+
+
+.socialMedia {
+    display: flex;
+}
+
+.socialMedia img {
+    width: 50px;
+    padding-left: 15px;
+}
+
+.containerSocialMedia {
+    display: flex;
+    justify-content: center;
+}
+
+#contato {
+    font-family: 'Karla', sans-serif;
+}
+
+.containerContato {
+    font-size: 22px;
+}
+
+form {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+input, textarea {
+    width: 200px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+}
