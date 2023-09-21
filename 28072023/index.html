@@ -1,7 +1,6 @@
 <!-- Declaração de que o documento é em HTML, marcando
 o início do código -->
 <!DOCTYPE html>
-
 <!-- Tag html lang: especifica o idioma da página-->
 <html lang="pt-BR">
 <!-- Tag head: não é visualizado no corpo (body) da página,
@@ -11,17 +10,17 @@ armazena os metadados -->
   <!-- Metadado UTF-8: considera um conjunto de caracteres presente no idioma
     Português (acentuação, por exemplo)-->
   <meta charset="UTF-8" />
-
   <!-- Metadado que possibilita a visualização em navegador de dispositivo móvel,
     mantendo a escala -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tag title: título da guia -->
+  <title>Laura Lopes</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- Referencia o arquivo CSS, colocar na tag head -->
   <link rel="stylesheet" href="style/style.css" />
-
-  <!-- Tag title: título da guia -->
-  <title>Soluções em TI</title>
-
 </head>
 
 <!-- Tag body: Definir o corpo do documento (conteúdo a ser visualizado) -->
@@ -33,32 +32,41 @@ armazena os metadados -->
 
   <!-- Cabeçalho da página -->
 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+  </style>
+
+  <!--Inicio do menu-->
+
+  <!-- Tag nav: Cria um seção de menu (navigation) -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navColor" id="navbarNav">
+        <ul class="navbar-nav" id="menu">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Início</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#sobremim">Sobre mim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicos">Soluções em T.I</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <header>
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-    </style>
-
-    <!--Inicio do menu-->
-
-    <!-- Tag nav: Cria um seção de menu (navigation) -->
-    <nav>
-
-      <!-- Tag ul: cria uma lista desordenada, enquanto a tag
-            ol cria uma lista ordenada -->
-      <ul id="menu">
-        <!-- Tag li: determina cada item -->
-
-        <!-- Tag a: possibilita que o texto seja clicável -->
-        <!-- href: determina o redirecionamento da página -->
-        <li><a href="#"> Início </a></li>
-        <li><a href="#sobremim"> Sobre mim </a></li>
-        <li><a href="#servicos"> Soluções em TI </a></li>
-        <li><a href="#contato"> Contato </a></li>
-      </ul>
-
-    </nav>
-    <!--Fim do menu-->
 
     <!-- Divisão em parte menor, dentro de uma seção, identificada pela
         palavra "apresentação" -->
@@ -246,10 +254,11 @@ armazena os metadados -->
             <input type="submit" class="enviar" onclick="enviarMensagem();" value="Enviar mensagem" />
           </div>
 
-          <div>
-            <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8063692462224!2d-46.70641572466709!3d-23.64710447874104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50f8ac76dfdb%3A0xc160a87f059ec93d!2sSenac%20Largo%20Treze!5e0!3m2!1spt-BR!2sbr!4v1695048250688!5m2!1spt-BR!2sbr" 
-            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8063692462224!2d-46.70641572466709!3d-23.64710447874104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50f8ac76dfdb%3A0xc160a87f059ec93d!2sSenac%20Largo%20Treze!5e0!3m2!1spt-BR!2sbr!4v1695048250688!5m2!1spt-BR!2sbr"
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>
@@ -274,11 +283,65 @@ armazena os metadados -->
   <!-- Inicio do rodapé-->
   <footer>
 
+    <!-- Grid container -->
 
-  </footer>
-  <!-- Fim do rodapé -->
+    <div class="containerMenu">
 
-  <script src="js/script.js"></script>
+      <!-- Section: Links -->
+      <section class="menu">
+
+        <a href="#">Início</a>
+        <a href="#sobremim">Sobre mim</a>
+        <a href="#servicos">Soluções em T.I</a>
+        <a href="#contato">Contato</a>
+
+      </section>
+      <!-- Section: Links -->
+
+      <section class="text-center mb-5">
+
+        <a href="https://api.whatsapp.com/send?phone=5511994608910" target="_blank" style="text-decoration: none;"
+          class="text-white me-4">
+          <i class="fab fa-whatsapp" style="color: #f8c1ff;"></i>
+        </a>
+
+        <a href="https://github.com/lauralopess" target="_blank" style="text-decoration: none;" class="text-white me-4">
+          <i class="fab fa-github" style="color: #f8c1ff;"></i>
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/laura-lopes-a2879422b/" target="_blank" style="text-decoration: none;"
+          class="text-white me-4">
+          <i class="fab fa-linkedin" style="color: #f8c1ff;"></i>
+        </a>
+
+        <a href="mailto:lauralopessts@gmail.com" target="_blank" style="text-decoration: none;" class="text-white me-4">
+          <i class="fa-solid fa-envelope" style="color: #f8c1ff;"></i>
+        </a>
+
+      </section>
+
+      <hr class="my-5"/>
+    </div>
+    <!-- Grid container -->
+
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+      © 2023 Copyright: Desenvolvido por Laura Lopes
+    </div>
+    <!-- Copyright -->
+    </div>
+    <!-- End of .container -->
+
+    <!-- Fim do rodapé -->
+
+    <script src="https://kit.fontawesome.com/979769342e.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
