@@ -405,10 +405,11 @@ footer {
 
 .titleCerti {
     text-align: left;
-    margin-left: 20px;
+    margin-left: 30px;
     padding-bottom: 10px;
     font-size: 18px;
     font-family: 'Julius Sans One', sans-serif;
+    color: #763ce2;
 }
 
 .textCertificacoes {
@@ -434,6 +435,7 @@ footer {
     padding-bottom: 10px;
     font-size: 18px;
     font-family: 'Julius Sans One', sans-serif;
+    color: #763ce2;
 }
 
 .containerCertificacoes {
