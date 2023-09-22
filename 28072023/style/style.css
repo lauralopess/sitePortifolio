@@ -407,9 +407,10 @@ footer {
     text-align: left;
     margin-left: 30px;
     padding-bottom: 10px;
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Julius Sans One', sans-serif;
     color: #763ce2;
+    font-weight: bold;
 }
 
 .textCertificacoes {
@@ -433,9 +434,10 @@ footer {
     text-align: left;
     margin-left: 268px;
     padding-bottom: 10px;
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Julius Sans One', sans-serif;
     color: #763ce2;
+    font-weight: bold;
 }
 
 .containerCertificacoes {
